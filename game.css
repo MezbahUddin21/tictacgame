@@ -1,0 +1,227 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+body{
+    background-color: rgb(26, 27, 27);
+}
+.credit{
+    text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.select_box.show,
+.result_box.show {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.3s;
+}
+.select_box.hide{
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.select_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 25px;
+    height: 200px;
+    width: 400px;
+    color: rgba(0, 0, 0, 0.699);
+    transition: 0.3s;
+    
+}
+.header{
+    height: 40px;
+    border-bottom: 1px dotted rgba(158, 158, 158, 0.74);
+    font-size: 30px;
+    font-weight: 600;
+    
+    
+    
+
+}
+.select_box .content{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.content .title{
+    font-size: 22px;
+    font-weight: 500;
+    
+}
+.content .buttons{
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+      
+}
+.buttons .button{
+    font-size: 22px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgb(26, 27, 27);
+    color: rgb(255, 255, 255);
+    width: 48%;
+    transition: 0.3s;
+
+    
+}
+.buttons .button:hover{
+    transform: scale(0.96);
+    box-shadow: inset 1px 1px 10px 0px rgba(0, 0, 0, 0.103);
+    transition: 0.3s;
+     }
+    /* game box */
+.game_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;  
+    
+}
+.game_box.show{   
+    opacity: 1;
+    pointer-events: auto;
+}
+.game_box .player_box{
+    background-color: white;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+    text-align: center;
+    margin: 5px;
+    position: relative;
+}
+.game_box .player_box .playerall{
+    /* background-color: rgb(26, 27, 27); */
+    height: 50px;
+    width: 48%;
+    padding: 13px;
+    font-size: 20px;
+    z-index: 5;
+    color: rgb(255, 255, 255);
+
+}
+
+.anim_playerall{
+    background-color: rgb(26, 27, 27);
+    height: 50px;
+    width: 48%;
+    margin: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: 0.4s;
+}
+.anim_playerall.anim_change{
+    position: absolute;
+    top: 0;
+    left: 47%;
+    transition: 0.4s;
+
+}
+
+
+.game_board section{
+    display: flex;
+    justify-content: space-between;
+}
+.game_board section span{
+    display: block;
+    height: 90px;
+    width: 90px;
+    margin: 5px;
+    color: #353535;
+    font-size: 40px;
+    line-height: 80px;
+    text-align: center;
+    background: #fff;
+    box-shadow: inset ;
+    
+}
+.game_board section span.clicked{
+    pointer-events: none;
+}
+
+.game_over {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    height: 300px;
+    width: 100%;
+    color: rgb(255, 0, 0);
+    background-color: rgba(255, 0, 0, 0.329);
+    font-size: 45px;
+    padding: 20px 10px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 90px 50px;
+    font-weight: 1000;
+    line-height: 50px;
+    opacity: 0;
+    pointer-events: none;
+
+}
+.game_over.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.result_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    height: 140px;
+    width: 400px;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    
+
+}
+
+.result_text{
+    margin: 20px;
+    font-size: 25px;
+
+}
+.result_text p{
+    display: inline;
+}
+
+.replay_btn{
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    width: 140px;
+    font-size: 20px;
+    background-color: rgb(26, 27, 27);
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+.replay_btn:hover{
+    transform: scale(0.96);
+    transition: 0.3s;
+}
